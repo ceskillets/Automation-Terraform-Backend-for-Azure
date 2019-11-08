@@ -1,0 +1,95 @@
+name: Terraform Backend (Azure)
+label: Terraform Backend (Azure)
+description: Creates a Terraform remote backend with state locking in Azure.
+type: terraform
+extends:
+
+labels:
+  collection: Terraform Backends
+
+variables:
+  - name: azure_subscription_id
+    description: Azure Subscription ID
+    type_hint: string
+  - name: azure_tenant_id
+    description: Azure Tenant ID
+    type_hint: string
+  - name: azure_client_id
+    description: Azure Application Client ID
+    type_hint: string
+  - name: azure_client_secret
+    description: Azure Application Client Secret
+    type_hint: password
+  - name: azure_location
+    description: Azure Location
+    default: choices
+    type_hint: dropdown
+    dd_list:
+      - key: East Asia
+        value: eastasia
+      - key: Southeast Asia
+        value: southeastasia
+      - key: Central US
+        value: centralus
+      - key: East US
+        value: eastus
+      - key: East US 2
+        value: eastus2
+      - key: West US
+        value: westus
+      - key: North Central US
+        value: northcentralus
+      - key: South Central US
+        value: southcentralus
+      - key: North Europe
+        value: northeurope
+      - key: West Europe
+        value: westeurope
+      - key: Japan West
+        value: japanwest
+      - key: Japan East
+        value: japaneast
+      - key: Brazil South
+        value: brazilsouth
+      - key: Australia East
+        value: australiaeast
+      - key: Australia Southeast
+        value: australiasoutheast
+      - key: South India
+        value: southindia
+      - key: Central India
+        value: centralindia
+      - key: West India
+        value: westindia
+      - key: Canada Central
+        value: canadacentral
+      - key: Canada East
+        value: canadaeast
+      - key: UK South
+        value: uksouth
+      - key: UK West
+        value: ukwest
+      - key: West Central US
+        value: westcentralus
+      - key: West US 2
+        value: westus2
+      - key: Korea Central
+        value: koreacentral
+      - key: Korea South
+        value: koreasouth
+      - key: France Central
+        value: francecentral
+      - key: France South
+        value: francesouth
+      - key: Australia Central
+        value: australiacentral
+      - key: Australia Central 2
+        value: australiacentral2
+      - key: UAE Central
+        value: uaecentral
+      - key: UAE North
+        value: uaenorth
+      - key: South Africa North
+        value: southafricanorth
+      - key: South Africa West
+        value: southafricawest
